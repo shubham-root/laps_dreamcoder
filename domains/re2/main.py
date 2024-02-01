@@ -126,7 +126,7 @@ def main(args):
                 maximumFrontier=5,
                 enumerationTimeout=1.0,
                 CPUs=1,
-                solver="ocaml",
+                solver="python",
                 evaluationTimeout=1.0,
             )
         if False:

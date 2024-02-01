@@ -93,7 +93,7 @@ def check_ocaml_enumeration_for_multi_thread(tasks, primitives_set, timeout, sho
         task.specialSolver = CLEVR_SOLVER_OCAML_FILE
     frontiers_per_task, bestSearchTime = multicoreEnumeration(clevr_grammar, tasks, _=None,
                              enumerationTimeout=float(timeout),
-                             solver='ocaml',
+                             solver='python',
                              CPUs=1,
                              maximumFrontier=MAX_FRONTIERS,
                              verbose=True,

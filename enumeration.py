@@ -18,7 +18,7 @@ def multicoreEnumeration(
     tasks,
     _=None,
     enumerationTimeout=None,
-    solver="ocaml",
+    solver="python",
     CPUs=1,
     maximumFrontier=None,
     verbose=True,
@@ -29,6 +29,7 @@ def multicoreEnumeration(
     solver_directory=DEFAULT_SOLVER_DIRECTORY,
     likelihood_model_string=INDUCTIVE_EXAMPLES_LIKELIHOOD_MODEL,
 ):
+    print("MAJOR SOLVER", solver)
     """g: Either a Grammar, or a map from task to grammar.
     Returns (list-of-frontiers, map-from-task-to-search-time)"""
 
@@ -493,6 +494,7 @@ def solveForTask_python(
     maximumFrontiers=None,
     testing=False,
     unigramGrammar=None,
+    *args, **kwargs
 ):
     return enumerateForTasks(
         g,
